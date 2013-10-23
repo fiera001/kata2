@@ -44,12 +44,20 @@ public class vector {
             }
         }
         
-        for (int iterator : elementsOfArray){
-            System.out.println("Numero");
-            System.out.println(elementsOfArray);
-            System.out.println("Ocurrencias");
-            System.out.println(eventsOfElement);
-        } 
+        int greaterFrequency;
+        greaterFrequency = eventsOfElement.get(0);
+        int pos = 0;
+        for (int index = 0; index < elementsOfArray.size(); index++){
+            if (greaterFrequency < eventsOfElement.get(index)){
+                greaterFrequency = eventsOfElement.get(index);
+                pos = index;
+            }
+        }
+        
+        System.out.println ("Numero");
+        System.out.println (elementsOfArray.get(pos));
+        System.out.println ("Ocurrencias");
+        System.out.println (greaterFrequency);
     }
     
 }
